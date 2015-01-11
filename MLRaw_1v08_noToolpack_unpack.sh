@@ -61,12 +61,12 @@ if [[ -z $2 ]]; then
 echo "ATTENTION: Specify second argument as REEL Folder(s) to setup. './*' for all Reel Folders "
 
 # Pack away tools
-rm -rf ./ctlrender
-rm -rf ./dcraw
-rm -rf ./ltcdump
-rm -rf ./mlv_dump
-rm -rf ./*.ctl
-rm -rf ./quiet.txt
+#rm -rf ./ctlrender
+#rm -rf ./dcraw
+#rm -rf ./ltcdump
+#rm -rf ./mlv_dump
+#rm -rf ./*.ctl
+#rm -rf ./quiet.txt
 exit
 fi
 
@@ -390,12 +390,12 @@ if [[ -z $2 ]]; then
 echo "ATTENTION: Specify second argument as REEL Folder(s) to offline. './#/*' for all Reel Folders (# is the Reel Number Folder "
 
 # Pack away tools
-rm -rf ./ctlrender
-rm -rf ./dcraw
-rm -rf ./ltcdump
-rm -rf ./mlv_dump
-rm -rf ./*.ctl
-rm -rf ./quiet.txt
+#rm -rf ./ctlrender
+#rm -rf ./dcraw
+#rm -rf ./ltcdump
+#rm -rf ./mlv_dump
+#rm -rf ./*.ctl
+#rm -rf ./quiet.txt
 exit
 fi
 
@@ -403,12 +403,12 @@ if [[ -z $3 ]]; then
 echo "ATTENTION: Specify third argument as 'y' or 'n' to tar/xz compression. "
 
 # Pack away tools
-rm -rf ./ctlrender
-rm -rf ./dcraw
-rm -rf ./ltcdump
-rm -rf ./mlv_dump
-rm -rf ./*.ctl
-rm -rf ./quiet.txt
+#rm -rf ./ctlrender
+#rm -rf ./dcraw
+#rm -rf ./ltcdump
+#rm -rf ./mlv_dump
+#rm -rf ./*.ctl
+#rm -rf ./quiet.txt
 exit
 fi
 
@@ -507,12 +507,12 @@ if [[ $pipeline = $online ]]; then
     echo " Must specify second command line argument:  .edl file \'SCAN EDL\' "
 
 # Pack away tools
-rm -rf ./ctlrender
-rm -rf ./dcraw
-rm -rf ./ltcdump
-rm -rf ./mlv_dump
-rm -rf ./*.ctl
-rm -rf ./quiet.txt
+#rm -rf ./ctlrender
+#rm -rf ./dcraw
+#rm -rf ./ltcdump
+#rm -rf ./mlv_dump
+#rm -rf ./*.ctl
+#rm -rf ./quiet.txt
     exit
     fi
 
@@ -520,36 +520,36 @@ rm -rf ./quiet.txt
     echo " Must specify frame handles:  #### "
 
 # Pack away tools
-rm -rf ./ctlrender
-rm -rf ./dcraw
-rm -rf ./ltcdump
-rm -rf ./mlv_dump
-rm -rf ./*.ctl
-rm -rf ./quiet.txt
+#rm -rf ./ctlrender
+#rm -rf ./dcraw
+#rm -rf ./ltcdump
+#rm -rf ./mlv_dump
+#rm -rf ./*.ctl
+#rm -rf ./quiet.txt
     exit
     fi
 
     if [[ -z $4 ]]; then
     echo " Must specify start event:  #### "
 # Pack away tools
-rm -rf ./ctlrender
-rm -rf ./dcraw
-rm -rf ./ltcdump
-rm -rf ./mlv_dump
-rm -rf ./*.ctl
-rm -rf ./quiet.txt
+#rm -rf ./ctlrender
+#rm -rf ./dcraw
+#rm -rf ./ltcdump
+#rm -rf ./mlv_dump
+#rm -rf ./*.ctl
+#rm -rf ./quiet.txt
     exit
     fi
 
     if [[ -z $5 ]]; then
     echo " Must specify end event:  #### "
 # Pack away tools
-rm -rf ./ctlrender
-rm -rf ./dcraw
-rm -rf ./ltcdump
-rm -rf ./mlv_dump
-rm -rf ./*.ctl
-rm -rf ./quiet.txt
+#rm -rf ./ctlrender
+#rm -rf ./dcraw
+#rm -rf ./ltcdump
+#rm -rf ./mlv_dump
+#rm -rf ./*.ctl
+#rm -rf ./quiet.txt
     exit
     fi
 
@@ -779,7 +779,7 @@ rm -rf ./quiet.txt
         echo ""
     fi
 
-    rm -rf ./"$scanedl"
+    #rm -rf ./"$scanedl"
 
 fi
 ###############################################################################################################################################################
@@ -805,12 +805,12 @@ echo "ATTENTION: Specify second argument as EDL name (in the edl file!) to gathe
 echo ""
 
 # Pack away tools
-rm -rf ./ctlrender
-rm -rf ./dcraw
-rm -rf ./ltcdump
-rm -rf ./mlv_dump
-rm -rf ./*.ctl
-rm -rf ./quiet.txt
+#rm -rf ./ctlrender
+#rm -rf ./dcraw
+#rm -rf ./ltcdump
+#rm -rf ./mlv_dump
+#rm -rf ./*.ctl
+#rm -rf ./quiet.txt
 exit
 fi
 
@@ -867,12 +867,12 @@ rm -rf ./quiet.txt
 cd "$startfromdir"
 
 # Pack away tools
-rm -rf ./ctlrender
-rm -rf ./dcraw
-rm -rf ./ltcdump
-rm -rf ./mlv_dump
-rm -rf ./*.ctl
-rm -rf ./quiet.txt
+#rm -rf ./ctlrender
+#rm -rf ./dcraw
+#rm -rf ./ltcdump
+#rm -rf ./mlv_dump
+#rm -rf ./*.ctl
+#rm -rf ./quiet.txt
 
 
 fi
@@ -881,12 +881,12 @@ fi
 ###############################################################################################################################################################
 
 # Pack away tools
-rm -rf ./ctlrender
-rm -rf ./dcraw
-rm -rf ./ltcdump
-rm -rf ./mlv_dump
-rm -rf ./*.ctl
-rm -rf ./quiet.txt
+#rm -rf ./ctlrender
+#rm -rf ./dcraw
+#rm -rf ./ltcdump
+#rm -rf ./mlv_dump
+#rm -rf ./*.ctl
+#rm -rf ./quiet.txt
 
 endTimeStamp=$(timestamp)
 endTimeStamp="${endTimeStamp:0:2}""${endTimeStamp:3:2}""${endTimeStamp:6:2}""${endTimeStamp:9:2}"

@@ -466,7 +466,7 @@ startnum=$(awk "BEGIN { printf(\"%07d\", $startnum + 0)}") #expand out to 7 digi
 
 #Create PRORES(proxy level) Proxies
 echo -ne "        Creating Prores(PROXY) Proxy for" "${bakefile:0:17}"
-ffmpeg -start_number "$startnum" -f image2 -r 24/1.001 -i ./temp"${bakefile:0:17}"_%07d.TIFF -codec:v prores -profile:v 0 -timecode "${bakefile:9:2}":"${bakefile:11:2}":"${bakefile:13:2}":"${bakefile:15:2}" -metadata:s:1 reel_name="${bakefile:0:8}" -y ../PROXIES/"${bakefile:0:17}".mov >> ../REPORTS/ffmpeg_report.txt 2>&1
+ffmpeg -start_number "$startnum" -f image2 -r 24/1.001 -i ./temp"${bakefile:0:17}"_%07d.TIFF -codec:v prores -profile:v 0 -timecode "${bakefile:9:2}":"${bakefile:11:2}":"${bakefile:13:2}":"${bakefile:15:2}" -metadata:s:v:0 reel_name="${bakefile:0:8}" -y ../PROXIES/"${bakefile:0:17}".mov >> ../REPORTS/ffmpeg_report.txt 2>&1
 
 # Remove 8-bit TIFFs used for PROXIES
 for ii in temp*.TIFF; do

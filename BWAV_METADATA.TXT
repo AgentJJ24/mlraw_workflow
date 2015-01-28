@@ -1,0 +1,10 @@
+BWAV FILE METADATA:
+
+-For Reel Name to be read by lightworks:
+  -Must be inserted into BEXT metadata "Description" as "xTAPE=REELNAME"
+-->  bwfmetaedit --Description="sTAPE=REELNAME" ./WAVEFILE.wav  
+
+-For Reel Name ("Tape Name") to be read by Premiere:
+  -Must be embedded via XMP embedding in WAV File
+-->  bwfmetaedit --in-XMP=./baselineXMP.xml ./WAVEFILE.wav
+*** NOTE THAT YOU MUST CHANGE ACTUAL "TAPE NAME" in THE XMP-XML TO WHAT YOU NEED!

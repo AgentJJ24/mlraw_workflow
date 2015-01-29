@@ -62,8 +62,6 @@ echo "Processing File: $filename in $folder with $foldername"
                 reelname="01""A""${id:4:5}"
             fi
 
-	    mkdir ../embedMetaWAVs/"$foldername"
-
             #CREATE XMP METADATA
 
             dd if=../baselineXMP.xml bs=1 skip=0 count=806 seek=0 conv=notrunc of=./"$reelname"_XMP.xml
@@ -71,14 +69,12 @@ echo "Processing File: $filename in $folder with $foldername"
             dd if=../baselineXMP.xml bs=1 skip=819 count=161 seek=814 conv=notrunc of=./"$reelname"_XMP.xml
 
 
-            cp ./"$i" ../embedMetaWAVs/"$foldername"/"$reelname".wav
-            bwfmetaedit --Description="sTAPE=$reelname" ../embedMetaWAVs/"$foldername"/"$reelname".wav
+            cp ./"$i" ../embedMetaWAVs/"$reelname".wav
+            bwfmetaedit --Description="sTAPE=$reelname" ../embedMetaWAVs/"$reelname".wav
             ###-For Reel Name ("Tape Name") to be read by Premiere:
             ###-Must be embedded via XMP embedding in WAV File
-            bwfmetaedit --in-XMP=./"$reelname"_XMP.xml ../embedMetaWAVs/"$foldername"/"$reelname".wav
+            bwfmetaedit --in-XMP=./"$reelname"_XMP.xml ../embedMetaWAVs/"$reelname".wav
             ###*** NOTE THAT THIS MUST CHANGE ACTUAL "TAPE NAME" in THE XMP-XML TO WHAT YOU NEED!
-    
-            sleep .01
 
             rm ./"$reelname"_XMP.xml
 
